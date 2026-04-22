@@ -34,7 +34,9 @@ function App() {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>FinTrack 💸</h1>
+      <h1 className="text-3xl font-bold text-blue-500">
+          FinTrack 💸
+          </h1>
       <h2>Saldo: {formatRupiah(balance)}</h2>
 
       <select onChange={(e) => setFilter(e.target.value)}>

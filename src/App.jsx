@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import TransactionForm from "./components/TransactionForm"
 import TransactionList from "./components/TransactionList"
 import { formatRupiah } from "./utils/formatRupiah"
+import ExpenseChart from "./components/ExpenseChart"
+
 
 function App() {
   const [transactions, setTransactions] = useState(() => {
@@ -43,6 +45,7 @@ function App() {
 
       <TransactionForm addTransaction={addTransaction} />
       <TransactionList transactions={filteredTransactions} />
+      <ExpenseChart transactions={transactions} />
     </div>
   )
 }
